@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popcorn</title>
+    <link rel="icon" type="images/png" href="icon.png" />
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carousel-slide {
+            display: none;
+            text-align: center;
+        }
+        
+        .carousel-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .btn {
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            cursor: pointer;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        /* Track */
+        
+         ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Handle */
+        
+         ::-webkit-scrollbar-thumb {
+            background: rgb(207, 96, 56);
+            border-radius: 20px;
+        }
+        /* Handle on hover */
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: orangered;
+        }
+        
+        #scrollToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: orangered;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top flex flex-row bg-orange-900">
+        <div class="basis-1/2 flex">
+            <img src="icon.png" alt="Popcorn" width="150px" height="150px" class="px-5 py-3" data-aos="fade-right" data-aos-duration="1500" />
+            <p data-aos="flip-up" data-aos-duration="3000" class="text-3xl text-white font-bold font-mono pt-[50px]">POPCORN</p>
+        </div>
+        <div class="basis-1/2 flex" data-aos="fade-left" data-aos-duration="1500">
+
+            <a href="" class="pr-5 text-white font-mono text-[23px] ml-5 hover:text-gray-600 pt-10">About</a>
+
+            <form>
+                <select id="city" name="city" class="mr-5 text-white  border-none font-mono text-[23px] ml-5 hover:text-white pt-1 mt-10 bg-orange-900">
+                    <option value="All" class="text-white">All</option>
+                    <option value="Dhaka" class="text-white">Dhaka</option>
+                    <option value="Khulna" class="text-white">Khulna</option>
+                    <option value="Jashore" class="text-white">Jashore</option>
+                    <option value="Pabna" class="text-white">Pabna</option>
+                  </select>
+            </form>
+
+            <a href="login.html" class="mr-5 text-white font-mono text-[23px] ml-5 hover:text-gray-600 pt-10">Login</a>
+            <a href="signup.html" class="mr-5 text-white font-mono text-[23px] ml-5 hover:text-gray-600 pt-10">Signup</a>
+
+
+
+        </div>
+    </div>
+
+    <div class="carousel-container flex justify-center items-center bg-black">
+        <div class="carousel-slide">
+            <img src="carousel_1.jpeg" alt="Image 1" width="1150px" height="200px">
+        </div>
+        <div class="carousel-slide">
+            <img src="carousel_2.jpeg" alt="Image 2" width="1150px" height="200px">
+        </div>
+        <div class="carousel-slide">
+            <img src="carousel_3.jpeg" alt="Image 3" width="1150px" height="200px">
+        </div>
+    </div>
+    <div class="list bg-orange-300">
+        <p class="text-4xl ml-10 py-7 font-mono font-bold text-center"> Movie List</p>
+        <div class="upcomming flex flex-wrap justify-center items-center gap-4 mx-3 py-[80px] rounded-sm">
+            <div class="card " data-aos="fade-down" data-aos-duration="1500">
+                <iframe width="400" height="285" src="https://www.youtube.com/embed/N9fmWMnxJQU?si=AB0zequdOOpHIFga" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <p class="text-center text-2xl bg-slate-500 btn text-white font-mono font-medium py-3">Buy Ticket</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                <iframe width="400" height="285" src="https://www.youtube.com/embed/bf35Tl-azEw?si=xMHtMmjnOeYD3WgB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <p class="text-center text-2xl bg-slate-500 btn text-white font-mono font-medium py-3">Buy Ticket</p>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-duration="1500">
+                <iframe width="400" height="285" src="https://www.youtube.com/embed/vcsQc4UlJ9M?si=uOvzDBa3elmDA-_j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <p class="text-center text-2xl bg-slate-500 btn text-white font-mono font-medium py-3">Buy Ticket</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                <iframe width="400" height="285" src="https://www.youtube.com/embed/KGI6L5oIusY?si=acnFerKI_e48NU8u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <p class="text-center text-2xl bg-slate-500 btn text-white font-mono font-medium py-3">Buy Ticket</p>
+            </div>
+        </div>
+    </div>
+    <div class="upcomming bg-slate-600 rounded-md">
+        <p data-aos="flip-up" data-aos-duration="1500" class="text-3xl pl-10 py-10 font-mono font-bold text-center text-white">Upcomming Movie Trailers</p>
+
+        <a href="#" class="text-white text-[20px] mx-5 my-3">View All</a>
+
+        <div class="upcomming flex flex-wrap justify-center items-center gap-3 px-3 pb-10">
+            <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                <iframe width="380" height="285" src="https://www.youtube.com/embed/bC36d8e3bb0?si=LXYrvVCZIcYbdCDu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-duration="1500">
+                <iframe width="380" height="285" src="https://www.youtube.com/embed/Gy_5ZRXU1L0?si=aQn3tRH7nTNnyan8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                <iframe width="380" height="285" src="https://www.youtube.com/embed/Dydmpfo68DA?si=47bSV-ZSiZgoW1tT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-duration="1500">
+                <iframe width="380" height="285" src="https://www.youtube.com/embed/QFf91hnpClI?si=ykLkM7jKGxKvWQcj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="about flex flex-row  py-20 bg-orange-300">
+        <div class="basis-1/2 flex" data-aos="fade-right" data-aos-duration="1500">
+            <img src="nagad.png" width="200px" />
+            <img src="bkash.png" width="200px" />
+            <img src="rocket.png" width="200px" />
+        </div>
+        <div class="basis-1/2 text-[23px] font-mono justify-center items-center" data-aos="fade-left" data-aos-duration="1500">
+            <p class="text-3xl bold font-semibold text-dark font-mono">Contact Us</p>
+            <small class="text-sm text-gray-500">If you face any problem.</small>
+            <div class="phone flex">
+                <img src="download__6_-removebg-preview.png" width="40px" />
+                <p class="text-xl font-mono font-semibold text-gray-950">mdshojib922@gmail.com</p>
+            </div>
+            <div class="phone flex">
+                <img src="download__6_-removebg-preview.png" width="40px" />
+                <p class="text-xl font-mono font-semibold text-gray-950">rukhsana190148@gmail.com</p>
+            </div>
+            <div class="phone flex ml-1">
+                <img src="2055904-removebg-preview.png" width="20px" height="20px" />
+                <p class="text-xl font-mono font-semibold text-gray-950">01790-407979</p>
+            </div>
+            <div class="phone flex ml-1">
+                <img src="2055904-removebg-preview.png" width="20px" height="20px" />
+                <p class="text-xl font-mono font-semibold text-gray-950">01309-655879</p>
+            </div>
+        </div>
+    </div>
+    <button onclick="scrollToTop()" id="scrollToTop" title="Go to top">/\</button>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script type="text/javascript">
+        AOS.init();
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll(".carousel-slide");
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides[currentIndex].style.display = "none";
+                currentIndex = (index + slides.length) % slides.length;
+                slides[currentIndex].style.display = "block";
+            }
+
+            // Initial slide
+            showSlide(currentIndex);
+
+            // Automatic slideshow
+            setInterval(function() {
+                showSlide(currentIndex + 1);
+            }, 3000); // Change slide every 3 seconds, adjust as needed
+        });
+        const popup = document.getElementById("mypopup");
+        popup.style.display = 'none';
+
+        function mypop() {
+            if (popup.style.display == 'none') {
+                popup.style.display = 'block';
+                popup.style.marginLeft = "-40px";
+
+            } else {
+                popup.style.display = 'none';
+            }
+
+        }
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTop").style.display = "block";
+            } else {
+                document.getElementById("scrollToTop").style.display = "none";
+            }
+        }
+
+        /* Scroll to the top when the button is clicked */
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+    </script>
+</body>
+
+</html>
